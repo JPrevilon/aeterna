@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { meta } from "@/lib/seo";
+
+export const metadata = meta({title:"Request Received", description:"Aeterna has received your booking or consultation request and will follow up with availability and next steps.", path:"/book/success"});
+
+export default function BookingSuccessPage(){return <section className="linen min-h-[70vh] bg-cream px-6 py-32 text-center md:px-8"><div className="mx-auto max-w-3xl rounded-5xl border border-cocoa/10 bg-gradient-to-b from-cream to-vanilla/75 p-8 shadow-luxury"><p className="text-xs uppercase tracking-luxury text-sage">Aeterna</p><h1 className="mt-4 font-display text-5xl leading-tight text-espresso md:text-6xl">Your request has been received.</h1><p className="mx-auto mt-5 max-w-2xl text-cocoa/70">Aeterna will follow up to confirm availability and next steps.</p><Link href="/" className="mt-8 inline-flex rounded-full border border-espresso bg-gradient-to-b from-cocoa to-espresso px-7 py-4 text-xs font-semibold uppercase tracking-[.18em] text-cream shadow-lift outline-none transition hover:-translate-y-0.5 hover:shadow-luxury focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-4 focus-visible:ring-offset-cream">Return Home</Link></div></section>}

@@ -1,0 +1,64 @@
+{
+  "currency": "usd",
+  "note": "Create these products/prices in Stripe, then copy price IDs into src/data/products.ts and src/data/memberships.ts.",
+  "one_time_products": [
+    {
+      "name": "Aeterna Gift Card - $100",
+      "unit_amount": 10000,
+      "type": "gift_card"
+    },
+    {
+      "name": "Aeterna Gift Card - $150",
+      "unit_amount": 15000,
+      "type": "gift_card"
+    },
+    {
+      "name": "Aeterna Gift Card - $250",
+      "unit_amount": 25000,
+      "type": "gift_card"
+    },
+    {
+      "name": "Aeterna Gift Card - $500",
+      "unit_amount": 50000,
+      "type": "gift_card"
+    },
+    {
+      "name": "Aeterna Booking Deposit",
+      "unit_amount": 5000,
+      "type": "deposit"
+    },
+    {
+      "name": "Aeterna Custom Facial",
+      "unit_amount": 12500,
+      "type": "spa_service"
+    },
+    {
+      "name": "Aeterna Signature Massage 60 min",
+      "unit_amount": 14500,
+      "type": "spa_service"
+    },
+    {
+      "name": "Hydration Boost IV + B12 Deposit",
+      "unit_amount": 5000,
+      "type": "consult_deposit"
+    }
+  ],
+  "subscription_products": [
+    {
+      "name": "Aeterna Glow Membership",
+      "unit_amount": 14900,
+      "interval": "month"
+    },
+    {
+      "name": "Aeterna Restore Membership",
+      "unit_amount": 24900,
+      "interval": "month"
+    },
+    {
+      "name": "Aeterna Longevity Membership",
+      "unit_amount": 39900,
+      "interval": "month"
+    }
+  ],
+  "direct_sale_warning": "Do not directly sell prescription GLP-1, hormone therapy, or consult-required medical services through Stripe unless provider/legal compliance approves it. Use consultation/deposit flows."
+}

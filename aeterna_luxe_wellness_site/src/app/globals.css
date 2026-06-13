@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream:#FFF9F0;
+  --vanilla:#F5EFE4;
+  --mist:#EFE7DC;
+  --cocoa:#5A3E2B;
+  --espresso:#2F2118;
+  --sage:#667452;
+  --olive:#4D5B3A;
+  --champagne:#C8A96A;
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(200,169,106,.10), transparent 34%),
+    linear-gradient(180deg, var(--cream), var(--vanilla) 52%, var(--cream));
+  color:var(--espresso);
+}
+::selection { background:rgba(111,125,92,.25); }
+
+.gold-line {
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(200,169,106,.9), transparent);
+}
+
+.hairline {
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(90,62,43,.16), rgba(200,169,106,.42), rgba(90,62,43,.16), transparent);
+}
+
+.noise { position:relative; }
+.noise:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.14;
+  background-image:radial-gradient(rgba(90,62,43,.15) .7px, transparent .7px);
+  background-size:6px 6px;
+}
+
+.linen { position:relative; }
+.linen:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.09;
+  background:
+    linear-gradient(90deg, rgba(90,62,43,.14) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.42) 1px, transparent 1px);
+  background-size:44px 44px;
+  mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+}
+
+.luxury-focus {
+  outline:none;
+}
+.luxury-focus:focus-visible {
+  box-shadow:0 0 0 2px rgba(111,125,92,.35), 0 0 0 6px rgba(255,249,240,.85);
+}
+
+.floating-logo {
+  animation:floatLogo 18s ease-in-out infinite;
+  background-image:url("/assets/logos/aeterna-symbol.png");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+@keyframes floatLogo {
+  0%,100% { transform:translateY(0) rotate(-1.5deg); }
+  50% { transform:translateY(-14px) rotate(1.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*:before,*:after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+  [style*="opacity:0"], [style*="opacity: 0"] {
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+}
