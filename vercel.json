@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "cd aeterna_luxe_wellness_site && npm ci",
+  "buildCommand": "cd aeterna_luxe_wellness_site && npm run build",
+  "outputDirectory": "aeterna_luxe_wellness_site/.next"
+}
