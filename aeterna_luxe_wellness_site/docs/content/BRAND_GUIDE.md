@@ -11,18 +11,21 @@ Aeterna is a luxury wellness sanctuary blending spa rituals, beauty treatments, 
 - Confident
 - Clinical where necessary
 - Never loud or gimmicky
-- Medical-spa credibility with a calm luxury hospitality finish
+- Luxury hospitality first, with clear medical-spa credibility
 
 ## Palette
 
 ```txt
-Deep Emerald Green: #0F3D2E
-Dark Forest Green: #09251C
-Rich Gold: #C8A96B
-Soft Champagne: #F7F1E8
-Sage Green: #7A9B8E
-Charcoal Text: #1E1E1E
-Clean White: #FFFFFF
+Warm Vanilla: #F5EFE4
+Soft Cream: #FFF9F0
+Cocoa Brown: #5A3E2B
+Deep Espresso: #2F2118
+Earth Sage: #6F7D5C
+Olive Green: #4D5B3A
+Champagne Gold: #C8A96A
+Soft Clay: #B99B7D
+Emerald Accent: #0F3D2E
+Dark Forest Accent: #09251C
 Clinical Blue (trust accents only): #2F7FA3
 ```
 
@@ -49,7 +52,7 @@ aeterna-symbol.png — favicon-style usage, loading screen, watermark, floating 
 
 ## Photography direction
 
-Use bright cream interiors, clean treatment spaces, plants, linens, emerald accents, and refined editorial crops. Treatment navigation should pair a clear label with a relevant image wherever possible.
+Use warm cream interiors, candlelight, plants, linens, soft shelves, earthy brown tones, and refined editorial crops. Emerald should be an accent, not the dominant field color. Treatment navigation should pair a clear label with a relevant image wherever possible.
 
 ## Medical trust cues
 

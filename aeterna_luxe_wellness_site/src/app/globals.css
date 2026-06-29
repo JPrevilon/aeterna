@@ -3,34 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --cream:#FFFFFF;
-  --vanilla:#F7F1E8;
-  --mist:#E8EFEC;
-  --cocoa:#1E1E1E;
-  --espresso:#0F3D2E;
-  --sage:#7A9B8E;
-  --olive:#09251C;
-  --champagne:#C8A96B;
+  --cream:#FFF9F0;
+  --vanilla:#F5EFE4;
+  --mist:#EFE7DC;
+  --cocoa:#5A3E2B;
+  --espresso:#2F2118;
+  --sage:#6F7D5C;
+  --olive:#4D5B3A;
+  --champagne:#C8A96A;
+  --emerald:#0F3D2E;
   --clinical:#2F7FA3;
 }
 
 html { scroll-behavior:smooth; }
 body {
   background:
-    radial-gradient(ellipse at 18% 0%, rgba(200,169,107,.10), transparent 34%),
+    radial-gradient(ellipse at 18% 0%, rgba(200,169,106,.10), transparent 34%),
     linear-gradient(180deg, var(--cream), var(--vanilla) 52%, var(--cream));
   color:var(--espresso);
 }
-::selection { background:rgba(122,155,142,.28); }
+::selection { background:rgba(15,61,46,.22); }
 
 .gold-line {
   height:1px;
-  background:linear-gradient(90deg, transparent, rgba(200,169,107,.9), transparent);
+  background:linear-gradient(90deg, transparent, rgba(200,169,106,.9), transparent);
 }
 
 .hairline {
   height:1px;
-  background:linear-gradient(90deg, transparent, rgba(15,61,46,.16), rgba(200,169,107,.52), rgba(15,61,46,.16), transparent);
+  background:linear-gradient(90deg, transparent, rgba(90,62,43,.16), rgba(200,169,106,.42), rgba(15,61,46,.18), transparent);
 }
 
 .noise { position:relative; }
@@ -40,7 +41,7 @@ body {
   inset:0;
   pointer-events:none;
   opacity:.14;
-  background-image:radial-gradient(rgba(15,61,46,.14) .7px, transparent .7px);
+  background-image:radial-gradient(rgba(90,62,43,.15) .7px, transparent .7px);
   background-size:6px 6px;
 }
 
@@ -52,7 +53,7 @@ body {
   pointer-events:none;
   opacity:.09;
   background:
-    linear-gradient(90deg, rgba(15,61,46,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90,62,43,.14) 1px, transparent 1px),
     linear-gradient(0deg, rgba(255,255,255,.42) 1px, transparent 1px);
   background-size:44px 44px;
   mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
@@ -62,7 +63,7 @@ body {
   outline:none;
 }
 .luxury-focus:focus-visible {
-  box-shadow:0 0 0 2px rgba(122,155,142,.38), 0 0 0 6px rgba(255,255,255,.88);
+  box-shadow:0 0 0 2px rgba(15,61,46,.34), 0 0 0 6px rgba(255,249,240,.85);
 }
 
 .floating-logo {
