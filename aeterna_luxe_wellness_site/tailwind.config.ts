@@ -9,21 +9,22 @@ const config: Config = {
         sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"]
       },
       colors: {
-        cream: "#FFF9F0",
-        vanilla: "#F5EFE4",
-        mist: "#EFE7DC",
-        cocoa: "#5A3E2B",
-        espresso: "#2F2118",
-        sage: "#667452",
-        olive: "#4D5B3A",
-        champagne: "#C8A96A",
-        clay: "#B99B7D"
+        cream: "#FFFFFF",
+        vanilla: "#F7F1E8",
+        mist: "#E8EFEC",
+        cocoa: "#1E1E1E",
+        espresso: "#0F3D2E",
+        sage: "#7A9B8E",
+        olive: "#09251C",
+        champagne: "#C8A96B",
+        clay: "#A9874F",
+        clinical: "#2F7FA3"
       },
       boxShadow: {
-        luxury: "0 30px 90px rgba(47,33,24,.18), 0 8px 24px rgba(90,62,43,.08)",
-        soft: "0 18px 48px rgba(90,62,43,.10)",
-        lift: "0 14px 36px rgba(47,33,24,.12)",
-        inset: "inset 0 1px 0 rgba(255,249,240,.75)"
+        luxury: "0 30px 90px rgba(9,37,28,.16), 0 8px 24px rgba(15,61,46,.08)",
+        soft: "0 18px 48px rgba(15,61,46,.09)",
+        lift: "0 14px 36px rgba(9,37,28,.13)",
+        inset: "inset 0 1px 0 rgba(255,255,255,.82)"
       },
       borderRadius: {
         "4xl": "2rem",
@@ -33,9 +34,9 @@ const config: Config = {
         luxury: ".22em"
       },
       backgroundImage: {
-        sanctuary: "radial-gradient(ellipse at 16% 8%, rgba(200,169,106,.18), transparent 32%), radial-gradient(ellipse at 88% 0%, rgba(111,125,92,.13), transparent 28%), linear-gradient(135deg,#FFF9F0,#F5EFE4 48%,#EFE7DC)",
-        parchment: "linear-gradient(135deg, rgba(255,249,240,.96), rgba(245,239,228,.92)), radial-gradient(ellipse at top left, rgba(200,169,106,.16), transparent 36%)",
-        espressoGlow: "radial-gradient(ellipse at 82% 8%, rgba(200,169,106,.16), transparent 34%), linear-gradient(135deg,#2F2118,#3A281D 54%,#241810)"
+        sanctuary: "radial-gradient(ellipse at 16% 8%, rgba(200,169,107,.18), transparent 32%), radial-gradient(ellipse at 88% 0%, rgba(122,155,142,.14), transparent 28%), linear-gradient(135deg,#FFFFFF,#F7F1E8 48%,#E8EFEC)",
+        parchment: "linear-gradient(135deg, rgba(255,255,255,.97), rgba(247,241,232,.94)), radial-gradient(ellipse at top left, rgba(200,169,107,.16), transparent 36%)",
+        espressoGlow: "radial-gradient(ellipse at 82% 8%, rgba(200,169,107,.18), transparent 34%), linear-gradient(135deg,#0F3D2E,#124A38 54%,#09251C)"
       }
     }
   }

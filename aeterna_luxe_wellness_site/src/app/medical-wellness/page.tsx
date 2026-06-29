@@ -3,6 +3,8 @@ import { PageHero } from "@/components/PageHero";
 import { ServiceCard } from "@/components/Card";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
 import { MedicalDisclaimer } from "@/components/MedicalDisclaimer";
+import { ClinicalTrust } from "@/components/ClinicalTrust";
+import { PaymentOptions } from "@/components/PaymentOptions";
 import { Button } from "@/components/Buttons";
 import { categories, byCategory } from "@/data/services";
 import { meta } from "@/lib/seo";
@@ -28,6 +30,7 @@ export default function MedicalWellnessPage() {
       copy="Consultation-first weight-loss support, provider-guided IV therapy, hormone wellness, body sculpting, and anti-aging care when clinically appropriate. Results vary."
       image="/assets/photos/aeterna-storefront-door.jpeg"
     />
+    <ClinicalTrust />
     <section className="linen bg-cream px-6 py-16 md:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
 
@@ -89,6 +92,7 @@ export default function MedicalWellnessPage() {
 
       </div>
     </section>
+    <PaymentOptions />
     <ConsultationCTA/>
   </>;
 }

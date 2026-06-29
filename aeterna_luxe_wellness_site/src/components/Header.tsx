@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, Menu, PhoneCall, X } from "lucide-react";
+import { CalendarDays, Menu, PhoneCall, ShieldCheck, X } from "lucide-react";
 import { useState } from "react";
 import { SITE } from "@/lib/constants";
 
@@ -19,7 +19,7 @@ export function Header() {
           <span className="grid h-12 w-12 place-items-center rounded-full border border-cocoa/10 bg-cream shadow-inset transition duration-500 group-hover:border-champagne/50">
             <Image src="/assets/logos/aeterna-symbol.png" alt="Aeterna symbol" width={48} height={48} className="h-9 w-9 object-contain" priority />
           </span>
-          <div><p className="font-display text-2xl uppercase tracking-[.22em] text-espresso">Aeterna</p><p className="hidden text-[10px] uppercase tracking-[.26em] text-sage sm:block">Luxe Wellness</p></div>
+          <div><p className="font-display text-2xl uppercase tracking-[.22em] text-espresso">Aeterna</p><p className="hidden items-center gap-1 text-[10px] uppercase tracking-[.2em] text-sage sm:flex"><ShieldCheck className="h-3 w-3 text-clinical" aria-hidden/> Luxe Medical Wellness</p></div>
         </Link>
         <nav className="hidden items-center rounded-full border border-cocoa/10 bg-cream/70 px-3 py-2 shadow-inset backdrop-blur lg:flex" aria-label="Primary navigation">{nav.map(([href,label]) => <Link key={href} href={href} className="rounded-full px-3 py-2 text-[11px] font-semibold uppercase tracking-[.16em] text-cocoa/75 outline-none transition hover:bg-vanilla hover:text-espresso focus-visible:ring-2 focus-visible:ring-sage/40">{label}</Link>)}</nav>
         <div className="hidden items-center gap-3 lg:flex"><a href={`tel:${SITE.phone}`} className="rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[.16em] text-cocoa/70 outline-none transition hover:text-espresso focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-4 focus-visible:ring-offset-cream">{SITE.phone}</a><Link href="/book" className="rounded-full border border-espresso bg-gradient-to-b from-cocoa to-espresso px-5 py-3 text-xs font-semibold uppercase tracking-[.16em] text-cream shadow-lift outline-none transition duration-500 hover:-translate-y-0.5 hover:shadow-luxury focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-4 focus-visible:ring-offset-cream">Book Now</Link></div>

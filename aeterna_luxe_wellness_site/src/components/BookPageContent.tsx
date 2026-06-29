@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Activity, ArrowRight, Droplets, HeartHandshake, UserCheck, Zap } from "lucide-react";
 import { BookingBuilder } from "@/components/BookingBuilder";
 import { Reveal, RevealStagger, RevealItem } from "@/components/Reveal";
+import { PaymentOptions } from "@/components/PaymentOptions";
 
 type PathCard = {
   key: string;
@@ -250,6 +251,7 @@ export function BookPageContent() {
           <BookingBuilder preselect={preselect} />
         </div>
       </div>
+      <PaymentOptions />
     </>
   );
 }

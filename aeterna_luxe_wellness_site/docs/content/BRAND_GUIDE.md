@@ -11,19 +11,19 @@ Aeterna is a luxury wellness sanctuary blending spa rituals, beauty treatments, 
 - Confident
 - Clinical where necessary
 - Never loud or gimmicky
-- Luxury hospitality first, medical credibility second
+- Medical-spa credibility with a calm luxury hospitality finish
 
 ## Palette
 
 ```txt
-Warm Vanilla: #F5EFE4
-Soft Cream: #FFF9F0
-Cocoa Brown: #5A3E2B
-Deep Espresso: #2F2118
-Earth Sage: #6F7D5C
-Olive Green: #4D5B3A
-Champagne Gold: #C8A96A
-Soft Clay: #B99B7D
+Deep Emerald Green: #0F3D2E
+Dark Forest Green: #09251C
+Rich Gold: #C8A96B
+Soft Champagne: #F7F1E8
+Sage Green: #7A9B8E
+Charcoal Text: #1E1E1E
+Clean White: #FFFFFF
+Clinical Blue (trust accents only): #2F7FA3
 ```
 
 ## Fonts
@@ -35,7 +35,7 @@ Headings: Cormorant Garamond or Playfair Display
 Body: Inter, Manrope, or Neue Haas-style sans serif
 ```
 
-Current starter uses Google-hosted Cormorant Garamond + Inter through Next.js font optimization.
+Current site uses Google-hosted Cormorant Garamond + Manrope through Next.js font optimization.
 
 ## Logo usage
 
@@ -49,7 +49,11 @@ aeterna-symbol.png — favicon-style usage, loading screen, watermark, floating 
 
 ## Photography direction
 
-Use warm cream interiors, candlelight, plants, linens, soft shelves, green accents, and slow editorial crops.
+Use bright cream interiors, clean treatment spaces, plants, linens, emerald accents, and refined editorial crops. Treatment navigation should pair a clear label with a relevant image wherever possible.
+
+## Medical trust cues
+
+Use blue shields, stethoscopes, Rx marks, and screening icons sparingly to distinguish clinical information from spa content. Do not display FDA approval, HIPAA, LegitScript, pharmacy, provider-credential, or other third-party certification claims without current documentation that specifically applies to Aeterna and the service being described.
 
 ## Copy examples
 

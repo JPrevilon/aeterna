@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Mail, Phone, Youtube } from "lucide-react";
+import { CreditCard, Instagram, Mail, Phone, Youtube } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
@@ -24,6 +24,7 @@ export function Footer() {
       <div>
         <div className="grid gap-8 sm:grid-cols-3">{cols.map(([title,links]) => <div key={title}><p className="text-xs font-semibold uppercase tracking-luxury text-champagne">{title}</p><div className="mt-4 grid gap-3">{links.map(([label,href]) => <Link key={href} href={href} className="rounded-full text-sm text-cream/70 outline-none transition hover:text-cream focus-visible:ring-2 focus-visible:ring-cream/25 focus-visible:ring-offset-4 focus-visible:ring-offset-espresso">{label}</Link>)}</div></div>)}</div>
         <div className="mt-12 rounded-5xl border border-cream/10 bg-cream/5 p-5 shadow-inset backdrop-blur md:p-6"><p className="font-display text-3xl">The Aeterna Letter</p><p className="mt-2 text-sm leading-6 text-cream/65">Seasonal rituals, wellness notes, product releases, and private offers.</p><NewsletterForm inverted /></div>
+        <div className="mt-4 flex items-start gap-3 rounded-4xl border border-champagne/25 bg-cream/5 p-4 text-sm text-cream/70"><CreditCard className="mt-0.5 h-5 w-5 shrink-0 text-champagne" aria-hidden/><p><span className="font-semibold text-cream">Payment options:</span> cash, major credit cards, in-house financing, and Alphaeon Credit. Financing is subject to approval and availability.</p></div>
       </div>
     </div>
     <div className="border-t border-cream/10 px-6 py-6 text-center text-xs text-cream/50">© {new Date().getFullYear()} Aeterna Luxe Wellness & Beauty. Results vary. Consultation required for medical wellness services.</div>
