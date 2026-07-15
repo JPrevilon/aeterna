@@ -45,7 +45,7 @@ export default function IvTherapyPage() {
       eyebrow="IV Therapy"
       title="Restore, recover, and recharge."
       copy="Provider-guided IV therapy designed to support hydration, recovery, immune wellness, and longevity. Choose from entry hydration drips to premium NAD+ protocols in Aeterna's private treatment rooms."
-      image="/assets/photos/aeterna-treatment-room.jpeg"
+      image="/assets/photos/IV-women.png"
     />
     <ServiceQuickStats stats={[
       { label: "Duration", value: "45–60 min" },

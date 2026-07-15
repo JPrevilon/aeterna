@@ -11,6 +11,7 @@ import { Button } from "@/components/Buttons";
 import { SplineSlot } from "@/components/SplineSlot";
 import { ClinicalTrust } from "@/components/ClinicalTrust";
 import { PaymentOptions } from "@/components/PaymentOptions";
+import { WeightLossResults } from "@/components/WeightLossResults";
 import { categories, featured } from "@/data/services";
 import { featuredProducts } from "@/data/products";
 import { memberships } from "@/data/memberships";
@@ -23,6 +24,7 @@ export const metadata = meta({
 export default function HomePage() {
   return <>
     <HomeHero />
+    <WeightLossResults />
     <ClinicalTrust />
     <SplineSlot />
     <Reveal className="linen bg-cream px-6 py-16 md:px-8 lg:py-24">

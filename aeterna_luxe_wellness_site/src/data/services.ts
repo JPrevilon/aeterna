@@ -186,7 +186,7 @@ export const services: Service[] = [
     description: "A hydration-focused IV therapy option with B12 support, designed for clients seeking replenishment, energy support, and recovery. A great entry-level IV experience in our relaxing treatment room.",
     durations: ["45–60 min"], priceLabel: "From $159", startingPrice: 159,
     consultRequired: false, featured: true, cta: "Book IV",
-    image: "/assets/photos/aeterna-treatment-room.jpeg",
+    image: "/assets/photos/IV-men.png",
     bestFor: ["Hydration", "Travel recovery", "Energy support"],
     benefits: ["Hydration support", "B12 included", "Wellness recovery", "Great entry IV"],
     note: "IV therapy requires intake and protocol review before treatment."
@@ -199,7 +199,7 @@ export const services: Service[] = [
     description: "A vitamin-rich IV therapy option designed to support hydration, immune wellness, and seasonal recovery. May include Vitamin C, B-complex, and additional wellness-support nutrients based on provider protocol.",
     durations: ["45–60 min"], priceLabel: "From $189", startingPrice: 189,
     consultRequired: false, cta: "Book IV",
-    image: "/assets/photos/aeterna-treatment-room.jpeg",
+    image: "/assets/photos/IV-women.png",
     bestFor: ["Immune wellness", "Seasonal support", "Recovery"],
     benefits: ["Immune wellness support", "Vitamin blend", "Hydration support", "Recovery-focused"],
     note: "IV therapy requires intake and protocol review before treatment. Results vary."
@@ -212,7 +212,7 @@ export const services: Service[] = [
     description: "A recovery-focused IV therapy option designed for active lifestyles, travel recovery, fatigue, and performance support. Formulated with hydration and wellness-support nutrients tailored to your recovery goals.",
     durations: ["45–60 min"], priceLabel: "From $219", startingPrice: 219,
     consultRequired: false, cta: "Book IV",
-    image: "/assets/photos/aeterna-treatment-room.jpeg",
+    image: "/assets/photos/IV-men.png",
     bestFor: ["Active lifestyle", "Travel recovery", "Fatigue support"],
     benefits: ["Recovery support", "Active lifestyle focus", "Hydration", "Performance wellness"],
     note: "IV therapy requires intake and protocol review before treatment. Results vary."
@@ -225,7 +225,7 @@ export const services: Service[] = [
     description: "A premium IV therapy option combining hydration and NAD+ support for clients focused on energy, longevity, and recovery. Consultation is required due to NAD+ protocol complexity and individual eligibility.",
     durations: ["60–90 min"], priceLabel: "From $299", startingPrice: 299,
     consultRequired: true, cta: "Book Consultation",
-    image: "/assets/photos/aeterna-treatment-room.jpeg",
+    image: "/assets/photos/IV-women.png",
     bestFor: ["NAD+ support", "Longevity", "Premium IV"],
     benefits: ["NAD+ longevity support", "Energy support", "Premium wellness protocol", "Consultation-first care"],
     note: "NAD+ IV therapy requires intake, provider evaluation, and protocol approval. Results vary."
