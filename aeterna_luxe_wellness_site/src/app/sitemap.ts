@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const now = new Date();
   const staticRoutes = [
-    "", "/services", "/medical-wellness", "/book", "/consultation",
+    "", "/services", "/medical-wellness", "/weight-loss", "/book", "/consultation",
     "/shop", "/memberships", "/gift-cards", "/the-experience", "/about",
     "/contact", "/journal", "/faq", "/policies", "/wellness-quiz",
     "/services/medical-weight-loss", "/services/tirzepatide-nad",

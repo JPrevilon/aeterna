@@ -6,7 +6,7 @@ import { useState } from "react";
 import { SITE } from "@/lib/constants";
 
 const nav = [
-  ["/services","Services"],["/medical-wellness","Medical Wellness"],["/shop","Shop"],["/memberships","Memberships"],["/the-experience","Experience"],["/contact","Contact"]
+  ["/services","Services"],["/medical-wellness","Medical Wellness"],["/weight-loss","Weight Loss"],["/shop","Shop"],["/memberships","Memberships"],["/the-experience","Experience"],["/contact","Contact"]
 ];
 
 export function Header() {
@@ -21,7 +21,7 @@ export function Header() {
           </span>
           <div><p className="font-display text-2xl uppercase tracking-[.22em] text-espresso">Aeterna</p><p className="hidden items-center gap-1 text-[10px] uppercase tracking-[.2em] text-emerald sm:flex"><ShieldCheck className="h-3 w-3 text-clinical" aria-hidden/> Luxe Medical Wellness</p></div>
         </Link>
-        <nav className="hidden items-center rounded-full border border-cocoa/10 bg-cream/70 px-3 py-2 shadow-inset backdrop-blur lg:flex" aria-label="Primary navigation">{nav.map(([href,label]) => <Link key={href} href={href} className="rounded-full px-3 py-2 text-[11px] font-semibold uppercase tracking-[.16em] text-cocoa/75 outline-none transition hover:bg-vanilla hover:text-espresso focus-visible:ring-2 focus-visible:ring-sage/40">{label}</Link>)}</nav>
+        <nav className="hidden items-center rounded-full border border-cocoa/10 bg-cream/70 px-2 py-2 shadow-inset backdrop-blur lg:flex" aria-label="Primary navigation">{nav.map(([href,label]) => <Link key={href} href={href} className="rounded-full px-2.5 py-2 text-[10px] font-semibold uppercase tracking-[.14em] text-cocoa/75 outline-none transition hover:bg-vanilla hover:text-espresso focus-visible:ring-2 focus-visible:ring-sage/40 xl:px-3 xl:text-[11px] xl:tracking-[.16em]">{label}</Link>)}</nav>
         <div className="hidden items-center gap-3 lg:flex"><a href={`tel:${SITE.phone}`} className="rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[.16em] text-cocoa/70 outline-none transition hover:text-espresso focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-4 focus-visible:ring-offset-cream">{SITE.phone}</a><Link href="/book" className="rounded-full border border-emerald bg-gradient-to-b from-emerald to-forest px-5 py-3 text-xs font-semibold uppercase tracking-[.16em] text-cream shadow-lift outline-none transition duration-500 hover:-translate-y-0.5 hover:shadow-luxury focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-4 focus-visible:ring-offset-cream">Book Now</Link></div>
         <button className="rounded-full border border-cocoa/15 bg-cream p-3 shadow-inset outline-none transition hover:border-sage/50 hover:bg-vanilla focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-4 focus-visible:ring-offset-cream lg:hidden" onClick={()=>setOpen(!open)} aria-label="Menu" aria-expanded={open} aria-controls="mobile-navigation">{open?<X/>:<Menu/>}</button>
       </div>

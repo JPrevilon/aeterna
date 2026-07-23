@@ -5,7 +5,7 @@ import { SITE } from "@/lib/constants";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 const cols = [
-  ["Explore", [["Services","/services"],["Medical Wellness","/medical-wellness"],["Book","/book"],["Shop","/shop"]]],
+  ["Explore", [["Services","/services"],["Medical Wellness","/medical-wellness"],["Weight Loss","/weight-loss"],["Shop","/shop"]]],
   ["Aeterna", [["Experience","/the-experience"],["Memberships","/memberships"],["Gift Cards","/gift-cards"],["Journal","/journal"]]],
   ["Care", [["FAQ","/faq"],["Policies","/policies"],["Contact","/contact"],["Consultation","/consultation"]]]
 ] as const;
