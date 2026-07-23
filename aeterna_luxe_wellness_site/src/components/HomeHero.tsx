@@ -34,8 +34,7 @@ export function HomeHero() {
           </span>
           <span className="pr-2 text-[10px] font-semibold uppercase tracking-[.24em] text-champagne">Aeterna Hollywood</span>
         </motion.div>
-        <motion.p initial={initial} animate={reveal} transition={{duration:.7}} className="text-xs font-semibold uppercase tracking-luxury text-champagne">Luxe Wellness & Beauty · Hollywood, Florida</motion.p>
-        <motion.h1 initial={initial} animate={reveal} transition={{duration:.95,delay:.08,ease:[.22,1,.36,1]}} className="mt-5 max-w-5xl font-display text-5xl leading-[.95] text-cream md:text-7xl lg:text-8xl xl:text-9xl">Aeterna Luxe Wellness & Beauty.</motion.h1>
+        <motion.h1 initial={initial} animate={reveal} transition={{duration:.7}} className="text-xs font-semibold uppercase tracking-luxury text-champagne">Luxe Wellness & Beauty · Hollywood, Florida</motion.h1>
         <motion.p initial={initial} animate={reveal} transition={{duration:.95,delay:.18,ease:[.22,1,.36,1]}} className="mt-7 max-w-2xl text-base leading-8 text-cream/80 md:text-xl md:leading-9">A medical-spa experience for beauty, balance, and longevity—combining serene rituals with consultation-first, provider-guided wellness when clinically appropriate. Results vary.</motion.p>
         <motion.div initial={initial} animate={reveal} transition={{duration:.95,delay:.28,ease:[.22,1,.36,1]}} className="mt-9 flex flex-col gap-3 sm:flex-row"><Button href="/book" className="focus-visible:ring-offset-espresso">Book a Consultation</Button><Button href="/services" variant="outline" className="border-cream/25 bg-cream/90 text-espresso focus-visible:ring-offset-espresso">Explore Services</Button></motion.div>
       </motion.div>
