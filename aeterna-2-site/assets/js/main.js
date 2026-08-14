@@ -8,6 +8,12 @@
 
   /* ------------------------------------------------------------- config -- */
 
+  /* Cache buster for the tour clips. The files are served with a week-long
+     max-age and their names are not content-hashed, so replacing a clip in
+     place leaves returning visitors on the old one until it expires.
+     Bump this whenever a clip is re-cut. */
+  var CLIP_VERSION = '3';
+
   // Six clips, one per gap between the seven tour chapters.
   var TOUR_CLIPS = [
     'assets/tour/clip-01.mp4',
@@ -16,7 +22,7 @@
     'assets/tour/clip-04.mp4',
     'assets/tour/clip-05.mp4',
     'assets/tour/clip-06.mp4'
-  ];
+  ].map(function (src) { return src + '?v=' + CLIP_VERSION; });
 
   /* Origin of the Aeterna app that serves /api/contact and /api/newsletter.
      Empty means same origin. Point it at the deployed app when this static
