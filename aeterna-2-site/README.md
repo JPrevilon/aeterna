@@ -131,6 +131,14 @@ people at the phone number and email. Contact submissions land in the `leads` ta
 send mail via Resend; sign-ups upsert into `newsletter_subscribers` — all configured on
 the app side, not here.
 
+### Replacing an asset
+
+`assets/` is served with a 7-day `max-age` (see `vercel.json`) and the filenames are
+not content-hashed, so overwriting a file in place leaves returning visitors on the
+cached copy until it expires. The tour clips carry a `?v=` token from `CLIP_VERSION`
+at the top of `assets/js/main.js` — bump it whenever a clip is re-cut. For images,
+either change the filename or accept up to a week of staleness.
+
 A `HealthAndBeautyBusiness` JSON-LD block in `index.html` carries the same address,
 phone, hours and social profiles for local search.
 
