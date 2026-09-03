@@ -634,13 +634,24 @@ button {
 .menu__row {
   display: flex;
   align-items: baseline;
-  gap: 24px;
-  padding: 24px 14px;
+  gap: 20px;
+  padding: 20px 14px;
   border-bottom: 1px solid rgba(176, 141, 87, 0.4);
   transition: background 0.5s ease;
 }
 
 .menu__row:hover { background: var(--sand); }
+
+/* Per-service thumbnail. The row aligns on the text baseline, so the image
+   centres itself rather than sitting on that baseline. */
+.menu__thumb {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  align-self: center;
+  object-fit: cover;
+  background: var(--sand);
+}
 
 .menu__main { flex: 1; min-width: 0; }
 
@@ -842,6 +853,11 @@ button {
   line-height: 1.9;
   color: rgba(246, 241, 231, 0.5);
   margin-top: 22px;
+}
+
+@media (max-width: 560px) {
+  .menu__thumb { width: 48px; height: 48px; }
+  .menu__row { gap: 14px; }
 }
 
 /* ------------------------------------------------------------ results --- */

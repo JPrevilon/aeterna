@@ -27,6 +27,7 @@ assets/scenes/          room stills
 assets/tour/            six tour clips
 assets/treatments/      category stills
 assets/photos/          client photography + before/after
+assets/services/        one thumbnail per service (43)
 ```
 
 ## Sections
@@ -35,7 +36,7 @@ assets/photos/          client photography + before/after
 | --- | --- |
 | Tour | 560vh scroll track with a pinned stage. Scroll position scrubs six clips across seven chapters; captions, the chapter rail, and the opening/closing cards are driven off the same eased progress value. Clips are prefetched one at a time and swapped to fully-buffered blobs so seeking never stalls. |
 | Our Story | Split image / copy, oversized symbol watermark, fade-up on entry. |
-| Treatments | Ten categories, 43 items. Tabs swap the price panel and crossfade the category still. Footer treatment links open the matching category. |
+| Treatments | Ten categories, 43 items, each row carrying its own thumbnail. Tabs swap the price panel and crossfade the category still. Footer treatment links open the matching category. |
 | Results | Auto-advancing testimonial carousel (pauses on hover and focus) plus drag-to-compare before/after sliders. |
 | Booking | CTA over imagery, leading into Contact. |
 | Contact | Practice details plus an enquiry form (name, email, phone, treatment interest, message, list opt-in). |
@@ -58,6 +59,10 @@ assets/photos/          client photography + before/after
   footer, so the cream is keyed out to alpha (anti-aliasing preserved) and the artwork
   trimmed to its bounding box. It is recoloured in CSS with
   `filter: brightness(0) invert(1)` wherever it needs to read as cream.
+- **Service thumbnails** (`assets/services/`) are one generated still per service,
+  43 in all, made with Higgsfield `nano_banana_pro` at 1k and downscaled to 256px
+  (~10 KB each, 520 KB for the set). They render at 64px, 48px under 560px wide.
+  Filenames are service slugs, so replacing one is a drop-in.
 - **Three of the design's stills** are edited variants (`…-c21eed7f`, `…-b933cff5`,
   `…-4474c7e0`) not present on that CDN. The unedited originals are used instead; they
   differ only in crop/retouch.
