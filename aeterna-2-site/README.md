@@ -35,7 +35,7 @@ assets/photos/          client photography + before/after
 | --- | --- |
 | Tour | 560vh scroll track with a pinned stage. Scroll position scrubs six clips across seven chapters; captions, the chapter rail, and the opening/closing cards are driven off the same eased progress value. Clips are prefetched one at a time and swapped to fully-buffered blobs so seeking never stalls. |
 | Our Story | Split image / copy, oversized symbol watermark, fade-up on entry. |
-| Treatments | Nine categories, 32 items. Tabs swap the price panel and crossfade the category still. Footer treatment links open the matching category. |
+| Treatments | Ten categories, 43 items. Tabs swap the price panel and crossfade the category still. Footer treatment links open the matching category. |
 | Results | Auto-advancing testimonial carousel (pauses on hover and focus) plus drag-to-compare before/after sliders. |
 | Booking | CTA over imagery, leading into Contact. |
 | Contact | Practice details plus an enquiry form (name, email, phone, treatment interest, message, list opt-in). |
@@ -66,11 +66,30 @@ assets/photos/          client photography + before/after
 
 The menu is the 32 services in the repo's `src/data/services.ts`, across its nine
 `categories` in that file's order — titles, price labels and durations match it exactly.
+A tenth category, **Facials & Skin** (11 services), was added from a handwritten list
+supplied by the owner; it is not yet reflected in `services.ts`, so that file and this
+page will need reconciling.
 Note that `docs/content/SERVICE_MENU.md` in the same repo is a **different, older draft**
 (massage/facial/body rituals, ranged prices, and its own note that pricing is unapproved).
 `services.ts` was used because it is what the design was built from and what the app renders.
 
-Two judgement calls worth reviewing:
+### Facials & Skin — values I supplied
+
+The owner's note gave service names and most prices, but no durations and no price for
+two lines. These are **my suggestions and need her sign-off before launch**:
+
+| Field | Source |
+| --- | --- |
+| All 11 durations | Suggested — none were on the note |
+| Customized Facial Consultation — "Free Consultation" | Suggested; matches the other consults in `services.ts` |
+| Lip Filler — "From $650 / syringe" | Suggested from market rates; nothing was written |
+| "Dermaplaning" | Her note reads "Dermablading"; corrected to the industry-standard term |
+| "Hydro Glow", "Oxygen Facial" | Struck-through words on the note, replacements read from her handwriting |
+
+Electroporation w/ EMS is priced at $85. The note could also be read as $485 — the
+leading digit looks struck through, and every other add-on-priced line is $85.
+
+Two further judgement calls worth reviewing:
 
 - **The ℞ badge** marks the 10 items that involve a prescription or medication
   (GLP-1 programs, NAD+, TRT, hormone support). `services.ts` sets `consultRequired: true`
