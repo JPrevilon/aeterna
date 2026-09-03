@@ -155,6 +155,74 @@ button {
   transform: translateY(0);
 }
 
+/* ---------------------------------------------------------- preloader -- */
+
+/* Must come first: a class rule with display:flex would otherwise beat the
+   [hidden] attribute's UA style and leave the overlay covering the page. */
+.preloader[hidden] { display: none; }
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  transition: opacity 0.8s ease;
+}
+
+.preloader.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader__mark {
+  width: 96px;
+  height: auto;
+  opacity: 0.85;
+  animation: aeterna-breathe 3.2s ease-in-out infinite;
+}
+
+.preloader__wordmark {
+  font-weight: 200;
+  font-size: clamp(20px, 3vw, 28px);
+  letter-spacing: 0.42em;
+  margin: 28px 0 0 0.42em; /* offset the trailing letter-space, so it reads centred */
+  color: var(--ink);
+}
+
+.preloader__track {
+  width: 180px;
+  height: 1px;
+  background: rgba(176, 141, 87, 0.3);
+  margin-top: 34px;
+}
+
+.preloader__bar {
+  height: 1px;
+  width: 0;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.preloader__label {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--ink-45);
+  margin-top: 16px;
+}
+
+@keyframes aeterna-breathe {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+/* Held only while the overlay is up; released by the same code that hides it. */
+body.is-loading { overflow: hidden; }
+
 /* --------------------------------------------------------------- nav ---- */
 
 .nav {
@@ -1441,4 +1509,5 @@ select.field__input {
   }
 
   .reveal { opacity: 1; transform: none; }
+  .preloader__mark { animation: none; opacity: 0.85; }
 }

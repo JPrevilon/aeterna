@@ -48,6 +48,17 @@
 </head>
 <body>
 
+<!-- Full-screen preloader. Visible in the markup so it paints before any
+     script runs; JS hides it once the hero can actually show a frame. The
+     noscript rule below means a script failure can never trap anyone behind it. -->
+<div class="preloader" id="preloader" role="status" aria-label="Loading Aeterna">
+  <img class="preloader__mark" src="assets/brand/aeterna-symbol.png" alt="" aria-hidden="true">
+  <div class="preloader__wordmark">AETERNA</div>
+  <div class="preloader__track"><div class="preloader__bar" id="preloaderBar"></div></div>
+  <p class="preloader__label">Preparing your visit</p>
+</div>
+<noscript><style>.preloader { display: none !important; }</style></noscript>
+
 <a class="skip-link" href="#story">Skip the tour</a>
 
 <!-- ============================================================= NAV ==== -->

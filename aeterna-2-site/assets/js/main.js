@@ -40,6 +40,82 @@
   };
   var clamp = function (v, lo, hi) { return v < lo ? lo : v > hi ? hi : v; };
 
+  /* --------------------------------------------------------- preloader -- */
+
+  /* Holds the visitor on a branded card until the hero can paint a real frame,
+     rather than dropping them on the empty dark stage. Progress is measured,
+     not animated: how much of the first clip has actually buffered, plus web
+     fonts, which the oversized AETERNA title would otherwise reflow. */
+  function initPreloader() {
+    var root = $('#preloader');
+    var bar  = $('#preloaderBar');
+    if (!root) return;
+
+    var HOLD_CAP = 9000;   // never keep anyone waiting longer than this
+    var shown = 0;
+    var done = false;
+
+    document.body.classList.add('is-loading');
+
+    function paint(p) {
+      // Monotonic: a stalling download must never look like it is going backwards.
+      shown = Math.max(shown, clamp(p, 0, 1));
+      bar.style.width = Math.round(shown * 100) + '%';
+    }
+
+    function finish() {
+      if (done) return;
+      done = true;
+      clearInterval(poll);
+      clearTimeout(cap);
+      paint(1);
+      document.body.classList.remove('is-loading');
+      root.classList.add('is-done');
+      if (reduceMotion) root.hidden = true;
+      else setTimeout(function () { root.hidden = true; }, 800);
+    }
+
+    var cap = setTimeout(finish, HOLD_CAP);
+
+    var fontsReady = true;
+    if (document.fonts && document.fonts.ready) {
+      fontsReady = false;
+      document.fonts.ready.then(function () { fontsReady = true; });
+    }
+
+    var clip = $('.tour__clip');
+    // No hero to wait on, or the video failed: release as soon as fonts settle.
+    if (!clip) {
+      var noClip = setInterval(function () {
+        paint(fontsReady ? 1 : 0.3);
+        if (fontsReady) { clearInterval(noClip); finish(); }
+      }, 120);
+      return;
+    }
+    clip.addEventListener('error', finish);
+
+    var poll = setInterval(function () {
+      var p = fontsReady ? 0.2 : 0.05;
+
+      if (clip.readyState >= 1 && isFinite(clip.duration) && clip.duration > 0) {
+        p += 0.1;
+        try {
+          if (clip.buffered.length) {
+            p += 0.6 * clamp(clip.buffered.end(0) / clip.duration, 0, 1);
+          }
+        } catch (err) { /* buffered can throw before metadata */ }
+      }
+
+      // readyState 2 = a frame is decoded and paintable, which is the real
+      // moment the hero stops looking broken. The remaining five clips keep
+      // downloading behind the tour's own progress rail.
+      if (fontsReady && clip.readyState >= 2) p = 1;
+
+      paint(p);
+      if (p >= 1) finish();
+    }, 120);
+  }
+
   /* ---------------------------------------------------------- spa tour --- */
 
   function initTour() {
@@ -511,6 +587,7 @@
   /* --------------------------------------------------------------- boot -- */
 
   function boot() {
+    initPreloader();
     initNav();
     initReveals();
     initTour();

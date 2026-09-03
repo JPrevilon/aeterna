@@ -34,6 +34,7 @@ assets/services/        one thumbnail per service (43)
 
 | Section | Behaviour |
 | --- | --- |
+| Preloader | Full-screen branded card held until the hero can paint a real frame. Progress is measured — how much of the first clip has buffered, plus `document.fonts.ready` — not animated. Released at `readyState >= 2`, with a 9s hard cap and a `<noscript>` rule so a script failure cannot trap anyone behind it. |
 | Tour | 560vh scroll track with a pinned stage. Scroll position scrubs six clips across seven chapters; captions, the chapter rail, and the opening/closing cards are driven off the same eased progress value. Clips are prefetched one at a time and swapped to fully-buffered blobs so seeking never stalls. |
 | Our Story | Split image / copy, oversized symbol watermark, fade-up on entry. |
 | Treatments | Ten categories, 43 items, each row carrying its own thumbnail. Tabs swap the price panel and crossfade the category still. Footer treatment links open the matching category. |
