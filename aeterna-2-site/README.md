@@ -127,15 +127,16 @@ Address and phone came from the owner directly; the rest from the repo's
 | | |
 | --- | --- |
 | Address | 2132 Hollywood Blvd, Hollywood, FL 33020 |
-| Phone | (305) 206-2630 |
+| Phone | (954) 526-3340 |
 | Email | Aeternawellnesshollywood@gmail.com |
 | Social | [Instagram](https://instagram.com/AeternaHollywood), [TikTok](https://www.tiktok.com/@AeternaWellness), [YouTube](https://www.youtube.com/@AeternaWellness) |
 
 Two things to confirm:
 
-- **The phone number differs from the repo.** `constants.ts` has `954-232-7238`;
-  the owner sent `305-206-2630`, which is what the site uses. Confirm which is the
-  public business line, and update `constants.ts` if the 954 number is stale.
+- **Three different phone numbers now exist.** `constants.ts` has `954-232-7238`;
+  the owner first sent `305-206-2630`; on 2026-09-25 she asked for `954-526-3340`,
+  which is what the site now uses. Confirm which is the public business line and
+  update `constants.ts` to match, so the app and this page stop disagreeing.
 - **The ZIP implies the city/state.** She sent "2132 Hollywood Blvd 33020"; 33020 is
   Hollywood, FL, which matches `constants.ts` (`location: "Hollywood, Florida"`), so
   the address is written out in full. There is no suite number — add one if needed.

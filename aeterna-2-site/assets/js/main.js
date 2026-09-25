@@ -504,7 +504,7 @@
   function failureMessage(err) {
     if (err && err.status === 429) return 'Too many messages just now — please try again shortly.';
     if (err && err.status === 400) return 'Please check the details above and try again.';
-    return 'Could not send just now. Please call (305) 206-2630 or email us directly.';
+    return 'Could not send just now. Please call (954) 526-3340 or email us directly.';
   }
 
   /* Contact form → /api/contact ({name, email, phone?, interest?, message}),
